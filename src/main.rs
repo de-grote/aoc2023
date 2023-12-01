@@ -37,7 +37,7 @@ fn main() {
 
     let (result, duration) = if args.len() == 1 {
         // TODO update daily
-        solution!(day01, part1)
+        solution!(day01, part2)
     } else if args.len() == 3 {
         get_solution(&args)
     } else {
