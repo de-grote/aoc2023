@@ -29,7 +29,9 @@ this does require the [cargo watch](https://crates.io/crates/cargo-watch) crate.
 
 A bit of text describing my experience with creating a solution for a specific day.
 
-* day 1: parsing more like suffering (I took way too long on trying to actually parse this stuff, eventhough working with strings is more effective but ugly)
+* day 1: parsing more like suffering (I took way too long on trying to actually parse this stuff, eventhough working with strings is more effective but ugly).
+
+* day 2: actually way easier than day 1 and I had fun making it work.
 
 ---
 
