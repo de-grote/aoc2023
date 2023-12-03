@@ -4,6 +4,7 @@ pub use nom::{
     branch::alt,
     bytes::complete::*,
     character::complete::{self, *},
+    combinator::*,
     multi::*,
     sequence::*,
     IResult,

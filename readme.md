@@ -33,6 +33,8 @@ A bit of text describing my experience with creating a solution for a specific d
 
 * day 2: actually way easier than day 1 and I had fun making it work.
 
+* day 3: challanging but still fun to solve, also my parsing in suboptimal again...
+
 ---
 
 Thanks for reading!
