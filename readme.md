@@ -35,6 +35,8 @@ A bit of text describing my experience with creating a solution for a specific d
 
 * day 3: challanging but still fun to solve, also my parsing in suboptimal again...
 
+* day 4: first day parsing actually turned out good.
+
 ---
 
 Thanks for reading!
