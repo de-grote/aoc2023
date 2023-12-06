@@ -7,6 +7,6 @@ pub use nom::{
     combinator::*,
     multi::*,
     sequence::*,
-    IResult,
+    IResult, Parser,
 };
 pub use std::collections::{BTreeMap, BTreeSet, BinaryHeap, HashMap, HashSet, VecDeque};

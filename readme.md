@@ -37,6 +37,10 @@ A bit of text describing my experience with creating a solution for a specific d
 
 * day 4: first day parsing actually turned out good.
 
+* day 5: I spend two entire days of my life on merging ranges, but it worked out in the end... I guess.
+
+* day 6: Very doable I just suck but I made a giant mistake not related to the code I won't tell you about.
+
 ---
 
 Thanks for reading!
