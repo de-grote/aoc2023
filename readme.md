@@ -29,17 +29,19 @@ this does require the [cargo watch](https://crates.io/crates/cargo-watch) crate.
 
 A bit of text describing my experience with creating a solution for a specific day.
 
-* day 1: parsing more like suffering (I took way too long on trying to actually parse this stuff, eventhough working with strings is more effective but ugly).
+* day 1: Parsing more like suffering (I took way too long on trying to actually parse this stuff, eventhough working with strings is more effective but ugly).
 
-* day 2: actually way easier than day 1 and I had fun making it work.
+* day 2: Actually way easier than day 1 and I had fun making it work.
 
-* day 3: challanging but still fun to solve, also my parsing in suboptimal again...
+* day 3: Challanging but still fun to solve, also my parsing in suboptimal again...
 
-* day 4: first day parsing actually turned out good.
+* day 4: First day parsing actually turned out good.
 
 * day 5: I spend two entire days of my life on merging ranges, but it worked out in the end... I guess.
 
 * day 6: Very doable I just suck but I made a giant mistake not related to the code I won't tell you about.
+
+* day 7: Do not speak ill of the Ord Pyramid for it is holy.
 
 ---
 
