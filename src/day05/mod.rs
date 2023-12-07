@@ -138,7 +138,7 @@ pub fn part2(input: &str) -> Answer {
         if let Some(s) = latest_seed {
             new_seeds.push(s);
         }
-        dbg!(&new_seeds);
+        // dbg!(&new_seeds);
         seeds = new_seeds;
     }
 

@@ -1,3 +1,4 @@
+use itertools::Itertools;
 use nom::{branch::alt, bytes::complete::tag, character::complete, multi::many0, IResult};
 use std::{
     env,
@@ -44,23 +45,33 @@ fn main() {
     let (result, duration) = if args.len() == 1 {
         // TODO update daily
         solution!(day07, part2)
+    } else if args.len() == 2 {
+        if args[1] == "all" {
+            run_all()
+        } else {
+            panic!("invalid format: provide 0 to 2 arguments, did you mean all?")
+        }
     } else if args.len() == 3 {
-        get_solution(&args)
+        let (_, (day, part)) =
+            parse_args(args[1].as_str(), args[2].as_str()).expect("invalid format, couldn't parse");
+        get_solution(day, part)
     } else {
-        panic!("invalid format: provide 2 or 0 arguments")
+        panic!("invalid format: provide 0 to 2 arguments")
     };
 
     println!();
     println!("{}", result);
     println!();
-    println!("solved in {:?}", duration)
+    print!("solved in {:?} ", duration);
+    #[cfg(debug_assertions)]
+    println!("on debug mode");
+    #[cfg(not(debug_assertions))]
+    println!("on release mode")
 }
 
-fn get_solution(args: &[String]) -> (String, Duration) {
-    let (_, (day, part)) =
-        parse_args(args[1].as_str(), args[2].as_str()).expect("invalid format, couldn't parse");
+fn get_solution(day: u8, part: u8) -> (String, Duration) {
     if !(1..=25).contains(&day) || !(1..=2).contains(&part) {
-        panic!("invalid format: day or part number too high")
+        panic!("invalid format: day or part number invalid")
     }
     match (day, part) {
         // TODO update daily
@@ -84,6 +95,29 @@ fn get_solution(args: &[String]) -> (String, Duration) {
             Duration::ZERO,
         ),
     }
+}
+
+fn run_all() -> (String, Duration) {
+    let mut time = Duration::ZERO;
+    let mut last_day = None;
+    for (day, part) in (1..=25).cartesian_product(1..=2) {
+        let t = get_solution(day, part).1;
+        if t.is_zero() {
+            last_day.get_or_insert(day);
+        }
+        time += t;
+    }
+
+    if last_day == Some(1) {
+        return ("didn't solve anything...".to_string(), Duration::ZERO);
+    }
+
+    let result = match last_day {
+        Some(day) => format!("solved all days up until day {}", day - 1),
+        None => "solved all days!".to_string(),
+    };
+    
+    (result, time)
 }
 
 fn parse_args<'a>(day: &'a str, part: &'a str) -> IResult<&'a str, (u8, u8)> {

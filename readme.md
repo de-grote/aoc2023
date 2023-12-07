@@ -15,9 +15,11 @@ I'm also going to be trying out the new (for me) parsing librairy [nom](https://
 ### How to run:
 
 Use ``cargo run`` to run the newest solution,
-or use ``cargo run -- --day=1 --part=1`` to run a specific day and part,
+or use ``cargo run -- --day=1 --part=1`` or ``cargo run day=1 part=1`` to run a specific day and part,
 you can also alias ``--day`` with ``-d`` and ``--part`` with ``-p`` or omit them entirely.
-(Also as a "feature" you can omit all dashes from day and part).
+Use ``cargo run all`` to run all days and see how fast they all get solved.
+
+The cli will also tell you how long it took to run the code, and if it was on debug or release mode
 
 You can also use ``cargo test`` to run the test with the provided test cases.
 When I'm developing I like to use ``cargo watch -x test`` to automatically run the tests while programming,
