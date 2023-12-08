@@ -45,6 +45,8 @@ A bit of text describing my experience with creating a solution for a specific d
 
 * day 7: Do not speak ill of the Ord Pyramid for it is holy.
 
+* day 8: The input is set up in a highly convinient way for getting the end result, it's almost like someone made it. :thinking:
+
 ---
 
 Thanks for reading!
