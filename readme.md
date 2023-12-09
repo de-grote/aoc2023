@@ -47,6 +47,8 @@ A bit of text describing my experience with creating a solution for a specific d
 
 * day 8: The input is set up in a highly convinient way for getting the end result, it's almost like someone made it. :thinking:
 
+* day 9: I loved how many iterator methods I could use today, if there were just a little more I wouldn't even need the while loop.
+
 ---
 
 Thanks for reading!
