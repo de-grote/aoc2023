@@ -49,6 +49,8 @@ A bit of text describing my experience with creating a solution for a specific d
 
 * day 9: I loved how many iterator methods I could use today, if there were just a little more I wouldn't even need the while loop.
 
+* day 10: A [friend of mine](https://github.com/MauritsWilke/AdventOfCode) and I went completely crazy on part 2 today, must fun so far.
+
 ---
 
 Thanks for reading!
