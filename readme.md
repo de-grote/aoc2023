@@ -51,6 +51,8 @@ A bit of text describing my experience with creating a solution for a specific d
 
 * day 10: A [friend of mine](https://github.com/MauritsWilke/AdventOfCode) and I went completely crazy on part 2 today, most fun so far.
 
+* day 11: I happened to take the approach which was required for part 2, which made it an easy to do part 2 for me.
+
 ---
 
 Thanks for reading!
