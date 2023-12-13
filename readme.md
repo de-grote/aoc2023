@@ -53,6 +53,10 @@ A bit of text describing my experience with creating a solution for a specific d
 
 * day 11: I happened to take the approach which was required for part 2, which made it an easy to do part 2 for me.
 
+* day 12: Part 2 doesn't actually work yet because it's too slow, I'll make an actual note once it's finished
+
+* day 13: Kind of uninteresting day, not much to say about it.
+
 ---
 
 Thanks for reading!
