@@ -29,6 +29,7 @@ pub mod day10;
 pub mod day11;
 pub mod day12;
 pub mod day13;
+pub mod day14;
 
 macro_rules! solution {
     ($day:ident, $part:ident) => {{
@@ -50,7 +51,7 @@ fn main() {
 
     let (result, duration) = if args.len() == 1 {
         // TODO update daily
-        solution!(day13, part2)
+        solution!(day14, part1)
     } else if args.len() == 2 {
         if args[1] == "all" {
             run_all()
@@ -107,6 +108,8 @@ fn get_solution(day: u8, part: u8) -> (String, Duration) {
         (12, 2) => solution!(day12, part2),
         (13, 1) => solution!(day13, part1),
         (13, 2) => solution!(day13, part2),
+        (14, 1) => solution!(day14, part1),
+        (14, 2) => solution!(day14, part2),
 
         _ => (
             "This day is not solved by me yet".to_string(),

@@ -57,6 +57,8 @@ A bit of text describing my experience with creating a solution for a specific d
 
 * day 13: Kind of uninteresting day, not much to say about it.
 
+* day 14: I wonder if someone actually ran all billion iterations, would be a skill issue though.
+
 ---
 
 Thanks for reading!
