@@ -59,6 +59,8 @@ A bit of text describing my experience with creating a solution for a specific d
 
 * day 14: I wonder if someone actually ran all billion iterations, would be a skill issue though.
 
+* day 15: I love how today I could use ``u8``s for almost everything, and probably is the best datatype for today.
+
 ---
 
 Thanks for reading!
