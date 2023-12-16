@@ -61,6 +61,8 @@ A bit of text describing my experience with creating a solution for a specific d
 
 * day 15: I love how today I could use ``u8``s for almost everything, and probably is the best datatype for today.
 
+* day 16: This is probably the most indented code I have ever written in rust so far.
+
 ---
 
 Thanks for reading!
