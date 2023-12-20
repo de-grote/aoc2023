@@ -1,7 +1,5 @@
 use crate::prelude::*;
 
-use glam::IVec2;
-
 #[derive(Debug, Clone, Copy, PartialEq, Eq)]
 enum Pipe {
     Start,

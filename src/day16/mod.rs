@@ -1,5 +1,3 @@
-use glam::IVec2;
-
 use crate::prelude::*;
 
 #[derive(Debug, PartialEq, Eq, Hash, Clone, Copy)]

@@ -1,5 +1,3 @@
-use glam::I64Vec2;
-
 use crate::prelude::*;
 
 pub fn part1(input: &str) -> Answer {

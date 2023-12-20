@@ -54,8 +54,6 @@ fn combinations(tiles: Vec<Tile>, numbers: Vec<u32>) -> u64 {
 
     optimise_left(&mut groups, &numbers);
 
-    // dbg!(&groups);
-
     let split_groups = groups
         .split(|&x| x == Tile::Unknown)
         .map(ToOwned::to_owned)
@@ -73,9 +71,10 @@ fn combinations(tiles: Vec<Tile>, numbers: Vec<u32>) -> u64 {
     let unknowns_left = groups.iter().filter(|&&x| x == Tile::Unknown).count();
 
     // we want to reduce unknowns_left and sum as much as possible for the best performence
-    // println!("{} | {}", unknowns_left, sum);
+    println!("{} | {}", unknowns_left, sum);
+    print_line(&groups);
 
-    for i in (0..2u64.pow(unknowns_left as u32)).filter(|&i| i.count_ones() == sum) {
+    for i in (0..(1u128 << unknowns_left)).filter(|&i| i.count_ones() == sum) {
         let a2 = (0..unknowns_left).map(|b| match ((i >> b) & 1) == 0 {
             true => Tile::Empty,
             false => Tile::Filled,
@@ -149,6 +148,12 @@ fn optimise_right(groups: &mut [Tile], numbers: &[u32]) -> Option<std::convert::
             if inv_overlap as u32 > numbers[current_number] {
                 break;
             }
+        } else if let Some(Tile::Filled) = groups.get(l.checked_sub(current)?) {
+            *groups.get_mut(l)? = Tile::Empty;
+            if *groups.get(l.checked_sub(1)?)? == Tile::Filled {
+                l -= 1;
+                b = true;
+            }
         }
     }
     None
@@ -216,6 +221,12 @@ fn optimise_left(groups: &mut [Tile], numbers: &[u32]) -> Option<std::convert::I
             if inv_overlap as u32 > numbers[current_number] {
                 break;
             }
+        } else if let Some(Tile::Filled) = groups.get(l + current) {
+            *groups.get_mut(l)? = Tile::Empty;
+            if *groups.get(l + 1)? == Tile::Filled {
+                l += 1;
+                b = true;
+            }
         }
     }
     None
@@ -224,8 +235,7 @@ fn optimise_left(groups: &mut [Tile], numbers: &[u32]) -> Option<std::convert::I
 fn valid_combination(mut it: impl Iterator<Item = Tile>, numbers: &[u32]) -> bool {
     for &n in numbers {
         loop {
-            let x = it.next();
-            if let Some(x) = x {
+            if let Some(x) = it.next() {
                 if x == Tile::Filled {
                     break;
                 }
@@ -234,15 +244,30 @@ fn valid_combination(mut it: impl Iterator<Item = Tile>, numbers: &[u32]) -> boo
             }
         }
         for _ in 0..(n - 1) {
-            if !it.next().is_some_and(|x| x == Tile::Filled) {
+            let Some(Tile::Filled) = it.next() else {
                 return false;
-            }
+            };
         }
-        if it.next().is_some_and(|x| x == Tile::Filled) {
+        if let Some(Tile::Filled) = it.next() {
             return false;
         }
     }
     it.all(|x| x == Tile::Empty)
+}
+
+#[allow(dead_code)]
+fn print_line(tiles: &[Tile]) {
+    for &tile in tiles {
+        print!(
+            "{}",
+            match tile {
+                Tile::Filled => "#",
+                Tile::Empty => ".",
+                Tile::Unknown => "?",
+            }
+        )
+    }
+    println!();
 }
 
 #[allow(clippy::type_complexity)]

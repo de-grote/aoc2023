@@ -39,7 +39,7 @@ pub fn part2(input: &str) -> Answer {
                     .map(|(a, b)| (b - a))
                     .collect();
             }
-            first.into_iter().rev().fold(0, |acc, v| {v - acc})
+            first.into_iter().rev().fold(0, |acc, v| v - acc)
         })
         .sum::<i32>();
 

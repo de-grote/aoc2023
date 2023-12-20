@@ -63,6 +63,14 @@ A bit of text describing my experience with creating a solution for a specific d
 
 * day 16: This is probably the most indented code I have ever written in rust so far.
 
+* day 17: Not feeling like dijkstra right now.
+
+* day 18: My bday! Part 2 doesn't work because it takes all your ram.
+
+* day 19: Day 5 was enough suffering, maybe later.
+
+* day 20: Actually got 2 stars today :O, code is just some random stuff that may or may not work for you, but I tried.
+
 ---
 
 Thanks for reading!

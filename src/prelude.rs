@@ -1,4 +1,5 @@
 pub use crate::Answer;
+pub use glam::{I64Vec2, IVec2, U64Vec2, UVec2};
 pub use itertools::*;
 pub use nom::{
     branch::alt,
